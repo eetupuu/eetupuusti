@@ -1,11 +1,10 @@
 body{
-font-family:Roboto, sans-serif;
+font-family:Roboto,sans-serif;
 margin:0;
 background:#FFFEFA;
 color:#231F20;
 line-height:1.6;
 }
-
 
 /* NAV */
 
@@ -13,36 +12,33 @@ header{
 position:sticky;
 top:0;
 background:white;
-padding:10px;
 box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav{
 display:flex;
-justify-content:center;
-gap:20px;
+justify-content:space-between;
+padding:15px 20px;
 }
 
-nav a{
+.menu a{
+margin-left:15px;
 text-decoration:none;
 color:#231F20;
-font-weight:500;
 }
-
-
 
 /* HERO */
 
 .hero{
-padding:40px 20px;
 background:#EFE8E9;
+padding:50px 20px;
 }
 
 .hero-container{
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:20px;
+gap:30px;
 }
 
 .hero img{
@@ -50,16 +46,10 @@ width:180px;
 border-radius:50%;
 }
 
-.hero-text{
-max-width:500px;
-}
-
-
-
 /* SECTIONS */
 
 section{
-padding:40px 20px;
+padding:50px 20px;
 }
 
 h1{
@@ -68,60 +58,74 @@ font-size:30px;
 
 h2{
 font-size:22px;
+margin-bottom:20px;
 }
 
+/* CV */
 
+.cv-grid{
+display:grid;
+gap:30px;
+}
 
 /* PORTFOLIO */
 
 .portfolio-grid{
 display:grid;
-grid-template-columns:1fr;
-gap:15px;
+gap:20px;
 }
 
-.portfolio-grid a{
+.portfolio-item img{
+width:100%;
+border-radius:8px;
+}
+
+/* BUTTON */
+
+.button{
 background:#C5E0B4;
-padding:20px;
+padding:12px 20px;
 text-decoration:none;
 color:#231F20;
 }
 
+/* FLOAT EMAIL */
 
-
-/* CONTACT */
-
-#contact{
-background:#EFE8E9;
+.email-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#C5E0B4;
+width:50px;
+height:50px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+color:#231F20;
 }
-
-
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:20px;
-font-size:14px;
-}
-
-
 
 /* DESKTOP */
 
-@media (min-width:768px){
-
-body{
-max-width:900px;
-margin:auto;
-}
+@media(min-width:768px){
 
 .hero-container{
 flex-direction:row;
 }
 
+.cv-grid{
+grid-template-columns:1fr 1fr;
+}
+
 .portfolio-grid{
 grid-template-columns:1fr 1fr 1fr;
+}
+
+body{
+max-width:1000px;
+margin:auto;
 }
 
 }
