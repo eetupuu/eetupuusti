@@ -64,13 +64,38 @@ margin-bottom:20px;
 /* CV */
 
 .cv-grid{
-display:grid;
-gap:30px;
-grid-template-columns:1fr;
+  display:grid;
+  gap:30px;
+  grid-template-columns:1fr; /* Mobile first: yksi sarake */
 }
 
 .skills{
-grid-column:1 / -1;
+  grid-column:1 / -1; /* Osaaminen koko leveys */
+}
+
+/* Työhistoria ja koulutus logot */
+.cv-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:10px;
+}
+
+.cv-item img{
+  width:40px;
+  height:40px;
+  object-fit:contain;
+}
+
+/* Desktop-layout */
+@media(min-width:768px){
+  .cv-grid{
+    grid-template-columns:1fr 1fr; /* Kaksi saraketta */
+  }
+
+  .hero-container{
+    flex-direction:row;
+  }
 }
 
 /* PORTFOLIO */
