@@ -66,6 +66,7 @@ margin-bottom:20px;
 .cv-grid{
 display:grid;
 gap:30px;
+grid-template-columns:1fr;
 }
 
 .skills{
@@ -114,6 +115,10 @@ color:#231F20;
 /* DESKTOP */
 
 @media(min-width:768px){
+
+.cv-grid{
+grid-template-columns:1fr 1fr;
+}
 
 .hero-container{
 flex-direction:row;
