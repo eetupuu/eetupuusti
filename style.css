@@ -27,6 +27,10 @@ text-decoration:none;
 color:#231F20;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 /* HERO */
 
 .hero{
